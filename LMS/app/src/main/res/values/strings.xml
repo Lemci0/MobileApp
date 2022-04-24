@@ -4,4 +4,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="childs_rewards">Childs\nRewards</string>
+    <string name="behaviourPoints">5</string>
+    <string name="dutyPoints">5</string>
+    <string name="name">Kamil</string>
 </resources>

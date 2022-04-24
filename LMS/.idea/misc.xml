@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/LMS/LMS/app/src/main/res/drawable/circle.xml" value="0.291" />
         <entry key="..\:/LMS/LMS/app/src/main/res/layout/activity_main.xml" value="0.2869791666666667" />
         <entry key="..\:/LMS/LMS/app/src/main/res/layout/fragment_dashboard.xml" value="0.2869791666666667" />
         <entry key="..\:/LMS/LMS/app/src/main/res/layout/fragment_home.xml" value="0.2869791666666667" />
