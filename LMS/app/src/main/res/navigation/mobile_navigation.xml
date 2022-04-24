@@ -22,4 +22,9 @@
         android:name="com.example.lms.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/childAddOrEditFragment"
+        android:name="com.example.lms.ui.home.ChildAddOrEditFragment"
+        android:label="fragment_child_add_or_edit"
+        tools:layout="@layout/fragment_child_add_or_edit" />
 </navigation>
