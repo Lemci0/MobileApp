@@ -13,4 +13,10 @@
     <string name="addButton">Add child</string>
     <string name="childsName">Child\'s name</string>
     <string name="birthday">Birthday</string>
+    <string name="behaviour">Behaviour</string>
+    <string name="duty">Duty</string>
+    <string name="duty_name">Name of the duty</string>
+    <string name="duty_point">Points</string>
+    <string name="duty_repeat_time">Duty repeat time</string>
+    <string name="choose_child">Choose child</string>
 </resources>

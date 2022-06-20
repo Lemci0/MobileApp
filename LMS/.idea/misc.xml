@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/MobileApp/LMS/app/src/main/res/drawable/background.xml" value="0.2765" />
+        <entry key="..\:/Android/MobileApp/LMS/app/src/main/res/layout/fragment_child_add_or_edit.xml" value="0.22871376811594202" />
+        <entry key="..\:/Android/MobileApp/LMS/app/src/main/res/layout/fragment_dashboard.xml" value="0.2296195652173913" />
+        <entry key="..\:/Android/MobileApp/LMS/app/src/main/res/layout/fragment_duty_add_or_edit.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android/MobileApp/LMS/app/src/main/res/layout/fragment_home.xml" value="0.22871376811594202" />
         <entry key="..\:/LMS/LMS/app/src/main/res/drawable/circle.xml" value="0.291" />
         <entry key="..\:/LMS/LMS/app/src/main/res/layout/activity_main.xml" value="0.2869791666666667" />
         <entry key="..\:/LMS/LMS/app/src/main/res/layout/fragment_child_add_or_edit.xml" value="0.2869791666666667" />
@@ -14,7 +19,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:padding="@dimen/big_padding"
+        tools:context=".ui.duties.DutyAddEditFragment">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/radio_button_behaviour"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/big_padding"
+                android:drawablePadding="@dimen/big_padding"
+                android:drawableEnd="@drawable/ic_heart_24"
+                android:paddingStart="@dimen/middle_corner_size"
+                android:text="@string/behaviour" />
+
+            <RadioButton
+                android:id="@+id/radio_button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/big_padding"
+                android:drawableEnd="@drawable/ic_task_completed"
+                android:drawablePadding="@dimen/big_padding"
+                android:paddingStart="@dimen/middle_corner_size"
+                android:text="@string/duty" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldChildName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/duty_name"
+            android:padding="@dimen/small_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:startIconDrawable="@drawable/ic_baseline_title_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldDutyPoints"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/duty_point"
+            android:padding="@dimen/small_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldChildName"
+            app:startIconDrawable="@drawable/ic_baseline_attach_point_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldDate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/duty_repeat_time"
+            android:padding="@dimen/small_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldDutyPoints"
+            app:startIconDrawable="@drawable/ic_baseline_calendar_month_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTextDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewChildRewardsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_padding"
+            android:text="@string/choose_child"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFieldDate" />
+
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayoutAvatarList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="@dimen/small_padding"
+            app:columnCount="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewChildRewardsLabel"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_max="500dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_padding"
+               app:cardBackgroundColor="#00000000"
+                app:cardElevation="0dp"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_row="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small_padding">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutForAvatarId1"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@{(viewModel.childList.size() >= 1 &amp;&amp; viewModel.childSelected.contains(viewModel.childList.get(0).childId))? @drawable/circle: @drawable/circle_gray, default=@drawable/circle_gray}"
+                        android:padding="@dimen/small_padding"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipToOutline="true"
+                            android:scaleType="centerInside"
+                            android:tag="ShapeableImageView"
+                            app:imageResource='@{resourceUtils.getResourceDrawableId(viewModel.childList.size() >=1 ?viewModel.childList.get(0).drawableName: "avatar_empty", context)}'
+                            app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_padding"
+                android:onClick="@{() -> viewModel.selectOrUnselectChild(viewModel.childList.get(1).childId)}"
+                android:visibility="@{viewModel.childList.size()>=2? View.VISIBLE : View.INVISIBLE }"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardElevation="0dp"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_row="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small_padding">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutForAvatarId2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@{(viewModel.childList.size() >= 2 &amp;&amp; viewModel.childSelected.contains(viewModel.childList.get(1).childId))? @drawable/circle: @drawable/circle_gray, default=@drawable/circle_gray}"
+                        android:padding="@dimen/medium_padding"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipToOutline="true"
+                            android:scaleType="centerInside"
+                            android:tag="ShapeableImageView"
+                            app:imageResource='@{resourceUtils.getResourceDrawableId(viewModel.childList.size() >=2 ?viewModel.childList.get(1).drawableName: "avatar_empty", context)}'
+                            app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_padding"
+                android:onClick="@{() -> viewModel.selectOrUnselectChild(viewModel.childList.get(2).childId)}"
+                android:visibility="@{viewModel.childList.size()>=3? View.VISIBLE : View.INVISIBLE }"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardElevation="0dp"
+                app:layout_column="2"
+                app:layout_columnWeight="1"
+                app:layout_row="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small_padding">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutForAvatarId3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@{(viewModel.childList.size() >= 3 &amp;&amp; viewModel.childSelected.contains(viewModel.childList.get(2).childId))? @drawable/circle: @drawable/circle_gray, default=@drawable/circle_gray}"
+                        android:padding="@dimen/medium_padding"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipToOutline="true"
+                            android:scaleType="centerInside"
+                            android:tag="ShapeableImageView"
+                            app:imageResource='@{resourceUtils.getResourceDrawableId(viewModel.childList.size() >=3 ?viewModel.childList.get(2).drawableName: "avatar_empty", context)}'
+                            app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/small_padding"
+                android:onClick="@{() -> viewModel.selectOrUnselectChild(viewModel.childList.get(3).childId)}"
+                android:visibility="@{viewModel.childList.size()>=4? View.VISIBLE : View.INVISIBLE}"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardElevation="0dp"
+                app:layout_column="3"
+                app:layout_columnWeight="1"
+                app:layout_row="0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small_padding">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutForAvatarId4"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@{(viewModel.childList.size() >= 4 &amp;&amp; viewModel.childSelected.contains(viewModel.childList.get(3).childId))? @drawable/circle: @drawable/circle_gray, default=@drawable/circle_gray}"
+                        android:padding="@dimen/medium_padding"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipToOutline="true"
+                            android:scaleType="centerInside"
+                            android:tag="ShapeableImageView"
+                            app:imageResource='@{resourceUtils.getResourceDrawableId(viewModel.childList.size() >=4 ?viewModel.childList.get(3).drawableName: "avatar_empty", context)}'
+                            app:shapeAppearance="@style/ShapeAppearance.App.CircleImageView" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <Button
+            android:id="@+id/buttonAddOrEditChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/huge_padding"
+            android:onClick="@{() -> viewModel.addDutyOrEdit()}"
+            android:text='@{viewModel.addMode? @string/add : @string/edit, default=Add}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/buttonCancelAddOrEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/huge_padding"
+            android:onClick="@{() -> viewModel.cancelAddOrEdit()}"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonAddOrEditChild" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:onClick="@{() -> viewModel.askToDeleteDuty()}"
+            android:visibility='@{viewModel.addMode? View.INVISIBLE: View.VISIBLE}'
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_delete_32" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
