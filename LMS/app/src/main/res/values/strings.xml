@@ -6,8 +6,11 @@
     <string name="childs_rewards">Childs\nRewards</string>
     <string name="behaviourPoints">BP:5</string>
     <string name="dutyPoints">DP:5</string>
-    <string name="name">Kamil</string>
+    <string name="name1">Kamil</string>
+    <string name="name2">Bartek</string>
+    <string name="name3">Paulina</string>
+    <string name="name4">Szymon</string>
+    <string name="addButton">Add child</string>
     <string name="childsName">Child\'s name</string>
-    <string name="birthday">Birthday</string>
     <string name="birthday">Birthday</string>
 </resources>
